@@ -1,14 +1,19 @@
 name: resume_app
-description: "A new Flutter project."
-publish_to: 'none'
+description: "My resume mobile application, developped using Flutter."
+publish_to: "none"
 version: 0.1.0
 
 environment:
-  sdk: '>=3.2.6 <4.0.0'
+  sdk: ">=3.2.6 <4.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
+
+  cupertino_icons: ^1.0.2
+  hidden_drawer_menu: ^3.0.1
+  rive: ^0.8.4
+  google_fonts: ^4.0.4
 
 dev_dependencies:
   flutter_test:
@@ -17,3 +22,13 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+
+  assets:
+    - assets/
+# fonts:
+#   family: PlayfairDisplay
+#   fonts:
+#     - asset: fonts/PlayfairDisplay-Medium.ttf
+#       weight: 500
+#     - asset: fonts/PlayfairDisplay-MediumItalic.ttf
+#       weight: 500

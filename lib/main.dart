@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:resume_app/colors.dart';
+import 'package:resume_app/hidden_drawer.dart';
 
 void main() {
   runApp(const MainApp());
@@ -9,12 +11,10 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
-      ),
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: HiddenDrawer(),
+      // theme: ThemeData(primaryColor: primary),
     );
   }
 }
