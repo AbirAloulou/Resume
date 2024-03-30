@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:resume_app/colors.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:rive/rive.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -12,23 +13,27 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
+    String _image = "assets/code.png";
+
     return Scaffold(
       backgroundColor: primary.shade300,
       body: Column(
-        crossAxisAlignment: CrossAxisAlignment.end,
         mainAxisSize: MainAxisSize.max,
         children: [
-          Text(
-            "Hello, I am",
-            style: GoogleFonts.playfairDisplay(
-              fontWeight: FontWeight.w400,
-              fontSize: 35,
+          Padding(
+            padding: const EdgeInsets.only(top: 100),
+            child: Text(
+              "Hello, I am",
+              style: GoogleFonts.playfairDisplay(
+                fontWeight: FontWeight.w400,
+                fontSize: 35,
+              ),
             ),
           ),
           Text(
             "Abir Aloulou",
             style: GoogleFonts.playfairDisplay(
-              fontWeight: FontWeight.w400,
+              fontWeight: FontWeight.w700,
               fontSize: 35,
             ),
           ),
@@ -41,12 +46,27 @@ class _HomePageState extends State<HomePage> {
               // color: Colors.redAccent,
             ),
           ),
-          Positioned(
-            bottom: 0,
-            right: 0,
-            child: (Image(
-              image: AssetImage("assets/code.png"),
-            )),
+          Expanded(
+            child: Align(
+              alignment: FractionalOffset.bottomCenter,
+              // child: Image(
+              //   image: AssetImage("assets/code.png"),
+              // ),
+              // child: RiveAnimation.asset("design_code.riv"),
+              child: Image(
+                image: AssetImage(_image),
+              ),
+              // child: GestureDetector(
+
+              //   onTap: () {
+              //     setState(() {
+              //       _image == "assets/code.png"
+              //           ? _image = "assets/art.png"
+              //           : _image = "assets/code.png";
+              //     });
+              //   },
+              // ),
+            ),
           ),
         ],
       ),

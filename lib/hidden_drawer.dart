@@ -34,7 +34,7 @@ class _HiddenDrawerState extends State<HiddenDrawer> {
           selectedStyle: mySelectedTextStyle,
           colorLineSelected: primary.shade900,
         ),
-        HomePage(),
+        const HomePage(),
       ),
       ScreenHiddenDrawer(
         ItemHiddenMenu(
@@ -43,7 +43,7 @@ class _HiddenDrawerState extends State<HiddenDrawer> {
           selectedStyle: mySelectedTextStyle,
           colorLineSelected: primary.shade900,
         ),
-        AboutMe(),
+        const AboutMe(),
       )
     ];
   }
@@ -56,7 +56,7 @@ class _HiddenDrawerState extends State<HiddenDrawer> {
       initPositionSelected: 0,
       slidePercent: 50,
       withAutoTittleName: false,
-      backgroundColorAppBar: Colors.transparent,
+      backgroundColorAppBar: const Color(0xFFF7CBCB),
     );
   }
 }
