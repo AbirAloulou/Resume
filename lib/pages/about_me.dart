@@ -1,5 +1,7 @@
+import 'package:country_flags/country_flags.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:ionicons/ionicons.dart';
+
 import '../colors.dart';
 
 class AboutMe extends StatefulWidget {
@@ -14,6 +16,7 @@ class _AboutMeState extends State<AboutMe> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: primary.shade300,
+      // backgroundColor: Color.fromRGBO(238, 239, 245, 1),
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -54,21 +57,21 @@ class _AboutMeState extends State<AboutMe> {
                               children: [
                                 Text(
                                   "Abir Aloulou",
-                                  style: GoogleFonts.playfairDisplay(
+                                  style: TextStyle(
                                     fontWeight: FontWeight.w700,
                                     fontSize: 35,
                                   ),
                                 ),
                                 Text(
                                   "Computer Engineer",
-                                  style: GoogleFonts.playfairDisplay(
+                                  style: TextStyle(
                                     fontWeight: FontWeight.w300,
                                     fontSize: 20,
                                   ),
                                 ),
                                 Text(
                                   "& Artist",
-                                  style: GoogleFonts.playfairDisplay(
+                                  style: TextStyle(
                                     fontWeight: FontWeight.w300,
                                     fontSize: 20,
                                   ),
@@ -80,22 +83,43 @@ class _AboutMeState extends State<AboutMe> {
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(top: 15, bottom: 20),
+                      padding: const EdgeInsets.only(top: 15, bottom: 15),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Icon(
-                            Icons.tag,
-                            color: primary.shade900,
+                          // Icon(
+                          //   Icons.tag,
+                          //   color: primary.shade900,
+                          // ),
+                          Padding(
+                            padding: const EdgeInsets.all(5.0),
+                            child: CountryFlag.fromCountryCode(
+                              'TN',
+                              height: 20,
+                              width: 30,
+                              borderRadius: 5,
+                            ),
                           ),
                           Text("Based in Sfax, Tunisia",
-                              style: GoogleFonts.poppins(
+                              style: TextStyle(
                                   fontWeight: FontWeight.w400,
                                   fontSize: 15,
                                   color: Colors.grey[600])),
                         ],
                       ),
-                    )
+                    ),
+                    //google maps thing
+                    // Padding(
+                    //   padding: const EdgeInsets.only(bottom: 15),
+                    //   child: Center(
+                    //     child: Container(
+                    //       color: Colors.amber,
+                    //       width: 48.0,
+                    //       height: 48.0,
+                    //       child: ,
+                    //     ),
+                    //   ),
+                    // )
                   ],
                 ),
               ),
@@ -110,13 +134,25 @@ class _AboutMeState extends State<AboutMe> {
                 children: [
                   Padding(
                     padding: const EdgeInsets.all(10),
-                    child: Text(
-                      "ABOUT ME",
-                      style: GoogleFonts.playfairDisplay(
-                        fontWeight: FontWeight.w700,
-                        fontSize: 20,
-                        letterSpacing: 5,
-                      ),
+                    child: Row(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(right: 10),
+                          child: Icon(
+                            Ionicons.heart_circle,
+                            color: primary.shade900,
+                            size: 35,
+                          ),
+                        ),
+                        Text(
+                          "ABOUT ME",
+                          style: TextStyle(
+                            fontWeight: FontWeight.w700,
+                            fontSize: 20,
+                            letterSpacing: 5,
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                   Container(
@@ -142,7 +178,7 @@ class _AboutMeState extends State<AboutMe> {
                       child: RichText(
                         text: TextSpan(
                           text: 'I\'m ',
-                          style: GoogleFonts.poppins(
+                          style: TextStyle(
                             fontWeight: FontWeight.normal,
                             fontSize: 20,
                             color: Colors.black,
@@ -151,7 +187,7 @@ class _AboutMeState extends State<AboutMe> {
                           children: <TextSpan>[
                             TextSpan(
                                 text: 'Abir Aloulou',
-                                style: GoogleFonts.gwendolyn(
+                                style: TextStyle(
                                     fontWeight: FontWeight.w700,
                                     color: primary.shade900,
                                     fontSize: 30,
@@ -176,7 +212,7 @@ class _AboutMeState extends State<AboutMe> {
                             TextSpan(text: 'of "'),
                             TextSpan(
                                 text: 'Appy Toons',
-                                style: GoogleFonts.gwendolyn(
+                                style: TextStyle(
                                     fontWeight: FontWeight.w700,
                                     color: primary.shade900,
                                     fontSize: 30,

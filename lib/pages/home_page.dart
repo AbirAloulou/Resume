@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:resume_app/colors.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:rive/rive.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -24,7 +22,7 @@ class _HomePageState extends State<HomePage> {
             padding: const EdgeInsets.only(top: 100),
             child: Text(
               "Hello, I am",
-              style: GoogleFonts.playfairDisplay(
+              style: TextStyle(
                 fontWeight: FontWeight.w400,
                 fontSize: 35,
               ),
@@ -32,14 +30,14 @@ class _HomePageState extends State<HomePage> {
           ),
           Text(
             "Abir Aloulou",
-            style: GoogleFonts.playfairDisplay(
+            style: TextStyle(
               fontWeight: FontWeight.w700,
               fontSize: 35,
             ),
           ),
           Text(
             " a Computer Engineer",
-            style: GoogleFonts.playfairDisplay(
+            style: TextStyle(
               fontWeight: FontWeight.w600,
               fontSize: 35,
               fontStyle: FontStyle.italic,
